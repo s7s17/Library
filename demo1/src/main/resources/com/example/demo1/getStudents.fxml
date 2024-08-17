@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="512.0" prefWidth="757.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.getStudentController">
+   <children>
+      <Button fx:id="btn_byname" layoutX="96.0" layoutY="46.0" mnemonicParsing="false" onMouseClicked="#getStudentByName" text="SearchByName" />
+      <Button fx:id="btn_byid" layoutX="407.0" layoutY="46.0" mnemonicParsing="false" onMouseClicked="#getStudentByID" text="SearchByID" />
+      <TextField fx:id="tf_search" layoutX="225.0" layoutY="46.0" />
+      <Button fx:id="btn_all" layoutX="521.0" layoutY="46.0" mnemonicParsing="false" onMouseClicked="#getAll" text="GetAll" />
+      <TableView fx:id="st_table" layoutX="25.0" layoutY="100.0" prefHeight="274.0" prefWidth="578.0">
+        <columns>
+          <TableColumn fx:id="S_ID" prefWidth="63.20001411437988" text="ID" />
+          <TableColumn fx:id="S_NAME" prefWidth="89.5999984741211" text="NAME" />
+            <TableColumn fx:id="S_SURNAME" prefWidth="104.79998779296875" text="surNAME" />
+            <TableColumn fx:id="S_BIRTHDATE" prefWidth="140.0" text="BirthDate" />
+            <TableColumn fx:id="S_GENDER" prefWidth="95.19998168945312" text="GENDER" />
+            <TableColumn fx:id="S_CLASS" prefWidth="87.20001220703125" text="CLASS" />
+        </columns>
+      </TableView>
+      <Button fx:id="btn_switch" layoutX="310.0" layoutY="418.0" mnemonicParsing="false" onMouseClicked="#switchtomain" text="Add Or Delete Student" />
+   </children>
+</AnchorPane>

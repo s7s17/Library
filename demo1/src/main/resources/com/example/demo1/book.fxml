@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="596.0" prefWidth="811.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.bookController">
+   <children>
+      <TableView fx:id="book_table" layoutX="38.0" layoutY="363.0" prefHeight="200.0" prefWidth="704.0">
+        <columns>
+          <TableColumn fx:id="b_isbn" prefWidth="84.80002212524414" text="ISBN" />
+          <TableColumn fx:id="b_name" prefWidth="252.79994201660156" text="Name" />
+            <TableColumn fx:id="b_pagecount" prefWidth="111.2000732421875" text="Page Count" />
+            <TableColumn fx:id="b_author" prefWidth="119.199951171875" text="author" />
+            <TableColumn fx:id="b_type" prefWidth="137.59991455078125" text="Type" />
+        </columns>
+      </TableView>
+      <TextField fx:id="tf_isbn" layoutX="592.0" layoutY="38.0" />
+      <TextField fx:id="tf_name" layoutX="592.0" layoutY="86.0" />
+      <TextField fx:id="tf_pageCount" layoutX="592.0" layoutY="140.0" />
+      <TextField fx:id="tf_authorID" layoutX="592.0" layoutY="184.0" />
+      <Text layoutX="749.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ISBN" wrappingWidth="37.336669921875" />
+      <Text layoutX="749.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="37.336669921875" />
+      <Text layoutX="749.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="pageCount" wrappingWidth="61.336669921875" />
+      <Text layoutX="746.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="author ID" wrappingWidth="50.936767578125" />
+      <Text layoutX="746.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="type ID" wrappingWidth="50.936767578125" />
+      <Text fx:id="t_delete" fill="#ef0707" layoutX="120.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="For Deleting Only Write The ISBN" wrappingWidth="95.20000000000005" />
+      <Text fx:id="t_result" fill="#ff0707" layoutX="186.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="247.20003662109366">
+         <font>
+            <Font size="18.0" />
+         </font></Text>
+      <Button fx:id="btn_Create" layoutX="641.0" layoutY="272.0" mnemonicParsing="false" onMouseClicked="#createBook" text="Create" />
+      <Button fx:id="btn_byisbn" layoutX="478.0" layoutY="38.0" mnemonicParsing="false" onMouseClicked="#byISBN" text="search By ISBN" />
+      <Button fx:id="btn_byName" layoutX="473.0" layoutY="86.0" mnemonicParsing="false" onMouseClicked="#byName" text="serarch By Name" />
+      <Button fx:id="btn_delete" layoutX="38.0" layoutY="59.0" mnemonicParsing="false" onMouseClicked="#deleteBook" text="Delete" />
+      <Button fx:id="btn_All" layoutX="37.0" layoutY="140.0" mnemonicParsing="false" onMouseClicked="#getAll" text="Get All" />
+      <ChoiceBox fx:id="bType" layoutX="591.0" layoutY="228.0" prefWidth="150.0" />
+      <Button fx:id="btn_main" layoutX="48.0" layoutY="259.0" mnemonicParsing="false" onMouseClicked="#GoToHome" text="Main Menu" />
+   </children>
+</AnchorPane>

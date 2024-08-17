@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="695.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.AuthorController">
+   <children>
+      <TextField fx:id="tf_id" layoutX="451.0" layoutY="36.0" />
+      <TextField fx:id="tf_name" layoutX="451.0" layoutY="81.0" />
+      <TextField fx:id="tf_surname" layoutX="451.0" layoutY="124.0" />
+      <Text layoutX="612.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" wrappingWidth="22.13671875" />
+      <Text layoutX="606.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="34.936767578125" />
+      <Text layoutX="609.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SurName" wrappingWidth="50.936767578125" />
+      <TableView fx:id="auth_table" layoutX="90.0" layoutY="228.0" prefHeight="200.0" prefWidth="515.0">
+        <columns>
+          <TableColumn fx:id="auth_id" prefWidth="138.39999389648438" text="ID" />
+          <TableColumn fx:id="auth_name" prefWidth="186.40003967285156" text="Name" />
+            <TableColumn fx:id="auth_surname" prefWidth="189.5999755859375" text="SurName" />
+        </columns>
+      </TableView>
+      <Button fx:id="btn_byname" layoutX="344.0" layoutY="81.0" mnemonicParsing="false" onMouseClicked="#authorByName" text="Search By Name" />
+      <Button fx:id="btn_byid" layoutX="344.0" layoutY="36.0" mnemonicParsing="false" onMouseClicked="#authorByID" text="Search By ID" />
+      <Button fx:id="btn_create" layoutX="500.0" layoutY="167.0" mnemonicParsing="false" onMouseClicked="#createAuthor" text="Create" />
+      <Button fx:id="btn_delete" layoutX="21.0" layoutY="35.0" mnemonicParsing="false" onMouseClicked="#deleteAuthor" text="Delete" />
+      <Text fx:id="t_Delete" fill="#f20505" layoutX="90.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="For Deleting Only Write The ID" wrappingWidth="93.33673095703125" />
+      <Button fx:id="btn_getall" layoutX="23.0" layoutY="124.0" mnemonicParsing="false" onMouseClicked="#allAuthors" text="Get All Authors" />
+      <Button fx:id="btn_main" layoutX="318.0" layoutY="488.0" mnemonicParsing="false" onMouseClicked="#GoToHome" text="Main Menu" />
+      <Text fx:id="t_message" fill="#ef0606" layoutX="35.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="226.1367301940918">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

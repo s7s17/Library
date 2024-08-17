@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="698.0" prefWidth="869.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.BorrowController">
+   <children>
+      <TableView fx:id="borrow_table" layoutX="13.0" layoutY="402.0" prefHeight="281.0" prefWidth="838.0">
+        <columns>
+          <TableColumn fx:id="bt_borrowID" prefWidth="122.39998817443848" text="Borrow ID" />
+          <TableColumn fx:id="bt_student" prefWidth="141.60003662109375" text="Student" />
+            <TableColumn fx:id="bt_book" prefWidth="131.20001220703125" text="Book" />
+            <TableColumn fx:id="bt_tokenDate" prefWidth="236.80001831054688" text="Token Date" />
+            <TableColumn fx:id="bt_broughtDate" prefWidth="209.5999755859375" text="Brought Date" />
+        </columns>
+      </TableView>
+      <TextField fx:id="tf_borrowID" layoutX="583.0" layoutY="38.0" />
+      <Text layoutX="766.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Borrow ID" wrappingWidth="61.336669921875" />
+      <Text layoutX="774.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student" wrappingWidth="44.5367431640625" />
+      <Text layoutX="774.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book" wrappingWidth="44.5367431640625" />
+      <Text layoutX="775.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Token Date" wrappingWidth="61.336669921875" />
+      <Text layoutX="770.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Brought Date" wrappingWidth="71.73681640625" />
+      <Text layoutX="128.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="For Deleting Only Write The ID" wrappingWidth="97.33670043945312" />
+      <Text fx:id="t_message" fill="#e70909" layoutX="225.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="157.33673095703125">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <ChoiceBox fx:id="cb_student" layoutX="581.0" layoutY="98.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="cb_book" layoutX="581.0" layoutY="154.0" prefWidth="150.0" />
+      <DatePicker fx:id="dp_tokenDate" layoutX="570.0" layoutY="212.0" />
+      <DatePicker fx:id="dp_BroughtDate" layoutX="569.0" layoutY="269.0" />
+      <Button fx:id="btn_Create" layoutX="624.0" layoutY="336.0" mnemonicParsing="false" onMouseClicked="#CreateBorrow" text="Create" />
+      <Button fx:id="btn_Delete" layoutX="53.0" layoutY="37.0" mnemonicParsing="false" onMouseClicked="#deleteBorrow" text="Delate" />
+      <Button fx:id="btn_All" layoutX="52.0" layoutY="154.0" mnemonicParsing="false" onMouseClicked="#GetAll" text="Get All" />
+      <Button fx:id="btn_byID" layoutX="487.0" layoutY="38.0" mnemonicParsing="false" onMouseClicked="#ByID" text="Search By ID" />
+      <Button fx:id="btn_BroughtDate" layoutX="416.0" layoutY="269.0" mnemonicParsing="false" onMouseClicked="#ByBroughtDate" text="Search By Brought Date" />
+      <Button fx:id="btn_main" layoutX="52.0" layoutY="269.0" mnemonicParsing="false" onMouseClicked="#GoToHome" text="Main Menu" />
+   </children>
+</AnchorPane>
